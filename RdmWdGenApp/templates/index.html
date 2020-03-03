@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Word Generator</title>
+
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+</head>
+
+<body id="wrapper">
+
+    <div>
+        <h1 class="fontColor margin">RANDOM WORD GENERATOR</h1>
+    </div>
+
+    <div class="fontColor margin">Count</div>
+
+    <div class="fontColor margin"> {{ request.session.count }}</div>
+
+    <div class="margin">
+        <h4 class="fontColor">Random Word</h4>
+    </div>
+
+    <div class="fontColor margin">{{ word }}</div>
+
+    <div class="margin2">
+        <a class="button fontColor" href="random_word">Generate</a>
+    </div>
+
+    <div class="margin2">
+        <a class="button fontColor" href="reset">Reset</a>
+    </div>
+
+</body>
+
+</html>
